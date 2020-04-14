@@ -1,0 +1,26 @@
+﻿@model DailyBlogger.Models.BlogPost
+@{
+    ViewData["Title"] = "Details";
+    Layout = "_layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <h2>@Model.blog_title</h2>
+
+    <p>@Model.content</p>
+
+    <p>
+        <a asp-action="Edit" asp-route-blog_id="@Model.blog_id">Edit this Post</a>
+    </p>
+    <p>
+        <a asp-action="Delete" asp-route-blog_id="@Model.blog_id">Delete this Post</a>
+    </p>
+</body>
+</html>
